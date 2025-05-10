@@ -127,7 +127,7 @@ Pikchr Open-Source Picture Language
 “Build” Pipeline the Unix Way™
 ==============================
 
-    $ mdsection.awk mdslides.md | pikchr | md2html > mdslides.html
+    $ mdsection.awk mdslides.md.in | pikchr | md2html > mdslides.html
 
 ``` pikchr @pipeline x-current-color svg-only
 A1: arrow right
@@ -196,7 +196,7 @@ arrow radius .05 right .1 then down then \
 Links
 =====
 
-* [Markdown source of this presentation](https://zenomt.zenomt.com/slides/mdslides.md)
+* [Markdown source of this presentation](https://zenomt.zenomt.com/slides/mdslides.md.in)
 * [`deck.css` presentation stylesheet](https://zenomt.zenomt.com/slides/deck.css)
 * [Pikchr home page](https://pikchr.org/)
 * [Pikchr command-line tool](https://github.com/zenomt/pikchr-cmd)

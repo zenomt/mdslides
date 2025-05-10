@@ -54,14 +54,12 @@ such as [Pikchr][], that adds inline SVG to the document. My [Pikchr command-lin
 tool][pikchr-cmd] is intended for Unix pipeline-style workflows. Image
 references can also be added if that's more convenient.
 
-    $ awk -f mdsection.awk < mdslides.md | pikchr | md2html > mdslides.html
+    $ awk -f mdsection.awk < mdslides.md.in | pikchr | md2html > mdslides.html
 
 <img src="pipeline.svg" />
 
 See [mdslides.html](mdslides.html) for a rendered presentation about this
-presentation toolset. Its source is `mdslides.md` linked in the "Links" slide
-at the end; GitHub Pages changes a direct link in this document to point to
-the rendered HTML.
+presentation toolset. Its source is [`mdslides.md.in`](mdslides.md.in).
 
 The CSS slide technique was inspired by
 "[Creating a Slide Deck with Just HTML and CSS][knowler]" by Nathan Knowler
