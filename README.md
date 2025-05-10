@@ -8,18 +8,18 @@ Add a link to the stylesheet at the top of your Markdown:
 
     <link rel="stylesheet" href="deck.css" />
 
-The `mdsection.awk` preprocessor script adds a new delimiter to Markdown: a
-line consisting only of three _or more_ colons (`:::`) (no indentation, no
-trailing whitespace) indicates a new slide.
+The [`mdsection.awk`](mdsection.awk) preprocessor script adds a new delimiter
+to Markdown: a line consisting only of three _or more_ colons (`:::`) (no
+indentation, no trailing whitespace) indicates a new slide.
 
-The `deck.css` stylesheet uses `<article>` and `<section>` semantic markup
-tags to style the final static HTML into a basic slide presentation without
-any JavaScript. The entire presentation is in an `<article>`, and each slide
-is a `<section>`. The first slide is the Title Slide and is styled differently
-than the rest: the Title Slide has a bigger font and all elements are centered
-on the slide. For all other slides, the first element (usually an `<h1>`
-heading) is the slide title, and all other content is left-justified and
-vertically centered.
+The [`deck.css`](deck.css) stylesheet uses `<article>` and `<section>` semantic
+markup tags to style the final static HTML into a basic slide presentation
+without any JavaScript. The entire presentation is in an `<article>`, and
+each slide is a `<section>`. The first slide is the Title Slide and is styled
+differently than the rest: the Title Slide has a bigger font and all elements
+are centered on the slide. For all other slides, the first element (usually
+an `<h1>` heading) is the slide title, and all other content is left-justified
+and vertically centered.
 
 The `mdsection.awk` preprocessor script looks for `:::` slide delimiters and
 adds the `<article>` and `<section>` tags around the slides to work with the
