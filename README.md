@@ -35,7 +35,7 @@ references can also be added if that's more convenient.
 <img src="pipeline.svg" />
 
 See [mdslides.html](mdslides.html) for a rendered presentation about this
-toolset. Its source is [mdslides.md](mdslides.md).
+toolset. Its source is [mdslides.md](./mdslides.md).
 
 The CSS slide technique was inspired by
 "[Creating a Slide Deck with Just HTML and CSS][knowler]" by Nathan Knowler
