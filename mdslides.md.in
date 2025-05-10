@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="deck.css" />
 <link rel="http://purl.org/dc/terms/requires" href="https://github.com/zenomt/pikchr-cmd" />
-<link rel="http://purl.org/dc/terms/requires" href="https://zenomt.zenomt.com/slides/mdsection.awk" />
+<link rel="http://purl.org/dc/terms/requires" href="https://zenomt.github.io/mdslides/mdsection.awk" />
 
 :::::::::::::::::::::::::::::::
 
@@ -200,7 +200,7 @@ Links
 * [`deck.css` presentation stylesheet](https://zenomt.github.io/mdslides/deck.css)
 * [Pikchr home page](https://pikchr.org/)
 * [Pikchr command-line tool](https://github.com/zenomt/pikchr-cmd)
-* [`mdsection.awk` preprocessor](https://zenomt.zenomt.com/slides/mdsection.awk)
+* [`mdsection.awk` preprocessor](https://zenomt.github.io/mdslides/mdsection.awk)
 * [MD4C `md2html`](https://github.com/mity/md4c/tree/master/md2html), the Markdown formatter I use
 * [Nathan Knowler on Codepen](https://codepen.io/knowler), the starting point for `deck.css`
 
