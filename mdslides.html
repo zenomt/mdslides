@@ -1,0 +1,220 @@
+<link rel="stylesheet" href="deck.css" />
+<link rel="http://purl.org/dc/terms/requires" href="https://github.com/zenomt/pikchr-cmd" />
+<link rel="http://purl.org/dc/terms/requires" href="https://zenomt.zenomt.com/slides/mdsection.awk" />
+<article>
+<section>
+<h1>This Deck is Just HTML and CSS</h1>
+<p>And I wrote it in Markdown*</p>
+<p><small><small>(*with a teeny-tiny extension)</small></small></p>
+<br/>
+<small>Michael Thornburgh</small>
+</section>
+<section>
+<h1></h1>
+<svg xmlns='http://www.w3.org/2000/svg' viewBox="0 0 182.304 34.56" data-pikchr-date="20250321215505" style='font-size:initial;'>
+<text x="91.152" y="17.28" text-anchor="middle" fill="currentColor" dominant-baseline="central">PowerPoint is awful</text>
+</svg>
+</section>
+<section>
+<h1></h1>
+<svg xmlns='http://www.w3.org/2000/svg' viewBox="0 0 152.813 74.88" data-pikchr-date="20250321215505" style='font-size:initial;'>
+<text x="76.4064" y="17.28" text-anchor="middle" fill="currentColor" dominant-baseline="central">Markdown</text>
+<text x="76.4064" y="37.44" text-anchor="middle" fill="currentColor" dominant-baseline="central">so hot right now</text>
+<text x="76.4064" y="53.9712" text-anchor="middle" fill="currentColor" font-size="64%" dominant-baseline="central">(and easy)</text>
+</svg>
+</section>
+<section>
+<h1>Inspirations</h1>
+<ul>
+<li><code>sent</code> (<code>https://tools.suckless.org/sent/</code>)<ul>
+<li>“Simple Plaintext Presentation Tool”</li>
+<li>X11 only</li>
+<li>A little <em>too</em> simple</li>
+</ul>
+</li>
+<li>Pandoc<ul>
+<li>“a universal document converter”</li>
+<li>Overkill</li>
+<li>Really heavyweight</li>
+<li>HTML presentations rely on JavaScript</li>
+</ul>
+</li>
+</ul>
+</section>
+<section>
+<h1>Solution: Static Style-able HTML</h1>
+<ul>
+<li>Deck is an <code>&lt;article&gt;</code></li>
+<li>Each slide is a <code>&lt;section&gt;</code></li>
+<li>First slide is the title slide</li>
+<li>First element of a <code>&lt;section&gt;</code> is the slide’s title</li>
+<li>Can include SVG, images, even videos</li>
+<li>Stylesheet turns it into a presentation</li>
+</ul>
+</section>
+<section>
+<h1>Solution: CSS Stylesheet</h1>
+<ul>
+<li>“Creating a Slide Deck with Just HTML and CSS” by Nathan Knowler on Codepen got me halfway</li>
+<li>CSS <code>flex</code> flexible box layout</li>
+<li>Each <code>&lt;section&gt;</code> fills viewport</li>
+<li>Overflow <code>scroll-snap</code> to next slide</li>
+<li>CSS Counter for auto slide numbering</li>
+<li>First slide has distinct Title Slide styling</li>
+</ul>
+</section>
+<section>
+<h1>Solution: Write it in Markdown</h1>
+<ul>
+<li>Easiest way to author HTML</li>
+<li>Extend with slide delimiter: “<code>:::</code>”</li>
+<li>16 lines of Awk converts to <code>&lt;section&gt;</code>s<ul>
+<li>I’ll show you it later</li>
+</ul>
+</li>
+</ul>
+</section>
+<section>
+<h1>Example</h1>
+<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;deck.css&quot; /&gt;
+
+:::::::::::::::::::::::::::::::
+
+This Deck is Just HTML and CSS
+==============================
+And I wrote it in Markdown*
+
+&lt;small&gt;&lt;small&gt;(*with a teeny-tiny extension)&lt;/small&gt;&lt;/small&gt;
+
+:::::::::::::::::::::::::::::::
+
+Solution: Static Style-able HTML
+================================
+
+* Deck is an `&lt;article&gt;`
+* Each slide is a `&lt;section&gt;`
+* First slide is the title slide
+* First element of a `&lt;section&gt;` is the slide’s title
+* Can include SVG, images, even videos
+* Stylesheet turns it into a presentation
+</code></pre>
+</section>
+<section>
+<h1></h1>
+<svg xmlns='http://www.w3.org/2000/svg' viewBox="0 0 205.92 34.56" data-pikchr-date="20250321215505" style='font-size:initial;'>
+<text x="102.96" y="17.28" text-anchor="middle" fill="currentColor" dominant-baseline="central">What about diagrams?</text>
+</svg>
+</section>
+<section>
+<h1>Pikchr Open-Source Picture Language</h1>
+<ul>
+<li>Based on <code>pic</code> “boxes and lines” tool of Unix yore</li>
+<li>Written by author of SQLite for its documentation</li>
+<li>Embeds in Markdown, generates inline SVG</li>
+<li>Open-source command-line driver tool written by me for use with <em>any</em> Markdown formatter</li>
+</ul>
+</section>
+<section>
+<h1>“Build” Pipeline the Unix Way™</h1>
+<pre><code>$ mdsection.awk mdslides.md | pikchr | md2html &gt; mdslides.html
+</code></pre>
+<svg xmlns='http://www.w3.org/2000/svg' viewBox="0 0 729.943 297.14" data-pikchr-date="20250321215505" style='font-size:initial;'>
+<polygon points="74.16,174.74 62.64,179.06 62.64,170.42" style="fill:currentColor"/>
+<path d="M2.16,174.74L68.4,174.74"  style="fill:none;stroke-width:2.16;stroke:currentColor;" />
+<path d="M81.66,199.94L200.983,199.94A7.5 7.5 0 0 0 208.483 192.44L208.483,157.04A7.5 7.5 0 0 0 200.983 149.54L81.66,149.54A7.5 7.5 0 0 0 74.16 157.04L74.16,192.44A7.5 7.5 0 0 0 81.66 199.94Z"  style="fill:none;stroke-width:2.16;stroke:currentColor;" />
+<text x="141.322" y="164.66" text-anchor="middle" font-family="monospace" fill="currentColor" dominant-baseline="central">mdsection.awk</text>
+<text x="141.322" y="184.82" text-anchor="middle" fill="currentColor" dominant-baseline="central">Preprocessor</text>
+<polygon points="280.483,174.74 268.963,179.06 268.963,170.42" style="fill:currentColor"/>
+<path d="M208.483,174.74L274.723,174.74"  style="fill:none;stroke-width:2.16;stroke:currentColor;" />
+<path d="M287.983,199.94L407.306,199.94A7.5 7.5 0 0 0 414.806 192.44L414.806,157.04A7.5 7.5 0 0 0 407.306 149.54L287.983,149.54A7.5 7.5 0 0 0 280.483 157.04L280.483,192.44A7.5 7.5 0 0 0 287.983 199.94Z"  style="fill:none;stroke-width:2.16;stroke:currentColor;" />
+<text x="347.645" y="164.66" text-anchor="middle" font-family="monospace" fill="currentColor" dominant-baseline="central">pikchr</text>
+<text x="347.645" y="184.82" text-anchor="middle" fill="currentColor" dominant-baseline="central">Preprocessor</text>
+<polygon points="486.806,174.74 475.286,179.06 475.286,170.42" style="fill:currentColor"/>
+<path d="M414.806,174.74L481.046,174.74"  style="fill:none;stroke-width:2.16;stroke:currentColor;" />
+<path d="M494.306,210.02L580.567,210.02A7.5 7.5 0 0 0 588.067 202.52L588.067,146.96A7.5 7.5 0 0 0 580.567 139.46L494.306,139.46A7.5 7.5 0 0 0 486.806 146.96L486.806,202.52A7.5 7.5 0 0 0 494.306 210.02Z"  style="fill:none;stroke-width:2.16;stroke:currentColor;" />
+<text x="537.437" y="154.58" text-anchor="middle" font-weight="bold" fill="currentColor" dominant-baseline="central">Any</text>
+<text x="537.437" y="174.74" text-anchor="middle" fill="currentColor" dominant-baseline="central">Markdown</text>
+<text x="537.437" y="194.9" text-anchor="middle" fill="currentColor" dominant-baseline="central">Formatter</text>
+<polygon points="660.067,174.74 648.547,179.06 648.547,170.42" style="fill:currentColor"/>
+<path d="M588.067,174.74L654.307,174.74"  style="fill:none;stroke-width:2.16;stroke:currentColor;" />
+<text x="32.2328" y="163.388" text-anchor="start" fill="currentColor" transform="rotate(-45 32.2328,173.468)" dominant-baseline="central">Sections + Markdown + Pikchr</text>
+<text x="238.556" y="163.388" text-anchor="start" fill="currentColor" transform="rotate(-45 238.556,173.468)" dominant-baseline="central">HTML + Markdown + Pikchr</text>
+<text x="444.879" y="163.388" text-anchor="start" fill="currentColor" transform="rotate(-45 444.879,173.468)" dominant-baseline="central">HTML + Markdown + SVG</text>
+<text x="618.14" y="163.388" text-anchor="start" fill="currentColor" transform="rotate(-45 618.14,173.468)" dominant-baseline="central">HTML + SVG Output</text>
+<polygon points="624.067,174.74 628.387,186.26 619.747,186.26" style="fill:currentColor"/>
+<path d="M624.067,180.5L624.067,264.74"  style="fill:none;stroke-width:2.16;stroke:currentColor;" />
+<text x="624.067" y="279.86" text-anchor="middle" font-family="monospace" fill="currentColor" dominant-baseline="central">deck.css</text>
+</svg>
+</section>
+<section>
+<h1>Section Preprocessor</h1>
+<pre><code>#! /usr/bin/env awk -f
+
+/^:::+$/ || /^\.bp$/ {
+    if(!article)
+    {
+        article = 1;
+        print &quot;&lt;article&gt;&quot;
+    }
+    else
+        print &quot;&lt;/section&gt;&quot;
+    print &quot;&lt;section&gt;&quot;
+    lastSection = NR;
+}
+
+(NR != lastSection)
+
+END {
+    if(article)
+        print &quot;\n\n&lt;/section&gt;\n&lt;/article&gt;&quot;
+}
+</code></pre>
+</section>
+<section>
+<h1>Pikchr Example</h1>
+<svg xmlns='http://www.w3.org/2000/svg' viewBox="0 0 488.88 112.32" data-pikchr-date="20250321215505" style='font-size:initial;'>
+<circle cx="4.32" cy="38.16" r="2.16" style="fill:currentColor;stroke-width:2.16;stroke:currentColor;" />
+<path d="M4.32,38.16L112.32,38.16"  style="fill:none;stroke-width:2.16;stroke:currentColor;" />
+<text x="58.32" y="26.46" text-anchor="middle" fill="currentColor" dominant-baseline="central">A Line</text>
+<path d="M112.32,74.16L220.32,74.16L220.32,2.16L112.32,2.16Z"  style="fill:none;stroke-width:2.16;stroke:currentColor;" />
+<text x="166.32" y="38.16" text-anchor="middle" fill="currentColor" dominant-baseline="central">A Box</text>
+<polygon points="328.32,38.16 316.8,42.48 316.8,33.84" style="fill:currentColor"/>
+<path d="M220.32,38.16L322.56,38.16"  style="fill:none;stroke-width:2.16;stroke:currentColor;stroke-dasharray:7.2,7.2;" />
+<circle cx="364.32" cy="38.16" r="36"  style="fill:none;stroke-width:2.16;stroke:currentColor;" />
+<text x="364.32" y="28.08" text-anchor="middle" fill="currentColor" dominant-baseline="central">A</text>
+<text x="364.32" y="48.24" text-anchor="middle" fill="currentColor" dominant-baseline="central">Circle</text>
+<polygon points="472.32,38.16 460.8,42.48 460.8,33.84" style="fill:currentColor"/>
+<path d="M400.32,38.16L466.56,38.16"  style="fill:none;stroke-width:2.16;stroke:currentColor;" />
+<polygon points="58.32,38.16 62.64,49.68 54,49.68" style="fill:currentColor"/>
+<path d="M472.32,38.16 L 479.52,38.16 Q 486.72,38.16 486.72,45.36 L 486.72,102.96 Q 486.72,110.16 479.52,110.16 L 65.52,110.16 Q 58.32,110.16 58.32,102.96 L 58.32,51.12 L 58.32,43.92"  style="fill:none;stroke-width:2.16;stroke:currentColor;" />
+</svg>
+<pre><code>``` pikchr x-current-color svg-only requote delimiters
+# This is the actual source requoted by the pikchr tool.
+dot
+line 150% &quot;A Line&quot; above
+box &quot;A Box&quot;
+arrow 150% dashed
+circle &quot;A&quot; &quot;Circle&quot;
+arrow
+arrow radius .05 right .1 then down then \
+    left until even with first line then to first line
+```
+</code></pre>
+</section>
+<section>
+<h1>Links</h1>
+<ul>
+<li><a href="https://zenomt.zenomt.com/slides/mdslides.md">Markdown source of this presentation</a></li>
+<li><a href="https://zenomt.zenomt.com/slides/deck.css"><code>deck.css</code> presentation stylesheet</a></li>
+<li><a href="https://pikchr.org/">Pikchr home page</a></li>
+<li><a href="https://github.com/zenomt/pikchr-cmd">Pikchr command-line tool</a></li>
+<li><a href="https://zenomt.zenomt.com/slides/mdsection.awk"><code>mdsection.awk</code> preprocessor</a></li>
+<li><a href="https://github.com/mity/md4c/tree/master/md2html">MD4C <code>md2html</code></a>, the Markdown formatter I use</li>
+<li><a href="https://codepen.io/knowler">Nathan Knowler on Codepen</a>, the starting point for <code>deck.css</code></li>
+</ul>
+</section>
+<section>
+<h1></h1>
+<center>made with <code>vi</code></center>
+</section>
+</article>
