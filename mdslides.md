@@ -1,0 +1,211 @@
+<link rel="stylesheet" href="deck.css" />
+<link rel="http://purl.org/dc/terms/requires" href="https://github.com/zenomt/pikchr-cmd" />
+<link rel="http://purl.org/dc/terms/requires" href="https://zenomt.zenomt.com/slides/mdsection.awk" />
+
+:::::::::::::::::::::::::::::::
+
+This Deck is Just HTML and CSS
+==============================
+And I wrote it in Markdown*
+
+<small><small>(*with a teeny-tiny extension)</small></small>
+
+<br/>
+<small>Michael Thornburgh</small>
+
+:::::::::::::::::::::::::::::::
+
+#
+
+``` pikchr x-current-color svg-only
+text "PowerPoint is awful"
+```
+
+:::::::::::::::::::::::::::::::
+
+#
+
+``` pikchr x-current-color svg-only
+text "Markdown" "so hot right now" "(and easy)" small small
+```
+
+:::::::::::::::::::::::::::::::
+
+Inspirations
+============
+
+* `sent` (`https://tools.suckless.org/sent/`)
+  * “Simple Plaintext Presentation Tool”
+  * X11 only
+  * A little _too_ simple
+* Pandoc
+  * “a universal document converter”
+  * Overkill
+  * Really heavyweight
+  * HTML presentations rely on JavaScript
+
+:::::::::::::::::::::::::::::::
+
+Solution: Static Style-able HTML
+================================
+
+* Deck is an `<article>`
+* Each slide is a `<section>`
+* First slide is the title slide
+* First element of a `<section>` is the slide’s title
+* Can include SVG, images, even videos
+* Stylesheet turns it into a presentation
+
+:::::::::::::::::::::::::::::::
+
+Solution: CSS Stylesheet
+========================
+
+* “Creating a Slide Deck with Just HTML and CSS” by Nathan Knowler on Codepen got me halfway
+* CSS `flex` flexible box layout
+* Each `<section>` fills viewport
+* Overflow `scroll-snap` to next slide
+* CSS Counter for auto slide numbering
+* First slide has distinct Title Slide styling
+
+:::::::::::::::::::::::::::::::
+
+Solution: Write it in Markdown
+==============================
+
+* Easiest way to author HTML
+* Extend with slide delimiter: “`:::`”
+* 16 lines of Awk converts to `<section>`s
+  * I’ll show you it later
+
+:::::::::::::::::::::::::::::::
+
+Example
+=======
+
+    <link rel="stylesheet" href="deck.css" />
+    
+    :::::::::::::::::::::::::::::::
+    
+    This Deck is Just HTML and CSS
+    ==============================
+    And I wrote it in Markdown*
+    
+    <small><small>(*with a teeny-tiny extension)</small></small>
+    
+    :::::::::::::::::::::::::::::::
+    
+    Solution: Static Style-able HTML
+    ================================
+    
+    * Deck is an `<article>`
+    * Each slide is a `<section>`
+    * First slide is the title slide
+    * First element of a `<section>` is the slide’s title
+    * Can include SVG, images, even videos
+    * Stylesheet turns it into a presentation
+
+:::::::::::::::::::::::::::::::
+
+#
+``` pikchr x-current-color svg-only
+text "What about diagrams?"
+```
+
+:::::::::::::::::::::::::::::::
+
+Pikchr Open-Source Picture Language
+===================================
+
+* Based on `pic` “boxes and lines” tool of Unix yore
+* Written by author of SQLite for its documentation
+* Embeds in Markdown, generates inline SVG
+* Open-source command-line driver tool written by me for use with _any_ Markdown formatter
+
+:::::::::::::::::::::::::::::::
+
+“Build” Pipeline the Unix Way™
+==============================
+
+    $ mdsection.awk mdslides.md | pikchr | md2html > mdslides.html
+
+``` pikchr @pipeline x-current-color svg-only
+A1: arrow right
+box rad 5px "mdsection.awk" mono "Preprocessor" fit
+A2: arrow
+box same "pikchr" mono "Preprocessor"
+A3: arrow
+box same "Any" bold "Markdown" "Formatter" fit
+A4: arrow
+
+define diag { line invis go 5% heading 45 from (0.4<$1.start,$1.end>) }
+diag(A1) "Sections + Markdown + Pikchr" ljust aligned above
+diag(A2) "HTML + Markdown + Pikchr" ljust aligned above
+diag(A3) "HTML + Markdown + SVG" ljust aligned above
+diag(A4) "HTML + SVG Output" ljust aligned above
+
+arrow <- down 125% from A4
+text "deck.css" mono
+```
+
+:::::::::::::::::::::::::::::::
+
+Section Preprocessor
+====================
+
+    #! /usr/bin/env awk -f
+    
+    /^:::+$/ || /^\.bp$/ {
+    	if(!article)
+    	{
+    		article = 1;
+    		print "<article>"
+    	}
+    	else
+    		print "</section>"
+    	print "<section>"
+    	lastSection = NR;
+    }
+    
+    (NR != lastSection)
+    
+    END {
+    	if(article)
+    		print "\n\n</section>\n</article>"
+    }
+
+:::::::::::::::::::::::::::::::
+
+Pikchr Example
+==============
+
+``` pikchr x-current-color svg-only requote delimiters
+# This is the actual source requoted by the pikchr tool.
+dot
+line 150% "A Line" above
+box "A Box"
+arrow 150% dashed
+circle "A" "Circle"
+arrow
+arrow radius .05 right .1 then down then \
+    left until even with first line then to first line
+```
+
+:::::::::::::::::::::::::::::::
+
+Links
+=====
+
+* [Markdown source of this presentation](https://zenomt.zenomt.com/slides/mdslides.md)
+* [`deck.css` presentation stylesheet](https://zenomt.zenomt.com/slides/deck.css)
+* [Pikchr home page](https://pikchr.org/)
+* [Pikchr command-line tool](https://github.com/zenomt/pikchr-cmd)
+* [`mdsection.awk` preprocessor](https://zenomt.zenomt.com/slides/mdsection.awk)
+* [MD4C `md2html`](https://github.com/mity/md4c/tree/master/md2html), the Markdown formatter I use
+* [Nathan Knowler on Codepen](https://codepen.io/knowler), the starting point for `deck.css`
+
+:::::::::::::::::::::::::::::::
+
+#
+<center>made with <code>vi</code></center>
+
