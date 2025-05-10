@@ -25,6 +25,30 @@ The `mdsection.awk` preprocessor script looks for `:::` slide delimiters and
 adds the `<article>` and `<section>` tags around the slides to work with the
 stylesheet.
 
+Example:
+
+    <link rel="stylesheet" href="deck.css" />
+    
+    :::::::::::::::::::::::::::::::
+    
+    This Deck is Just HTML and CSS
+    ==============================
+    And I wrote it in Markdown*
+    
+    <small><small>(*with a teeny-tiny extension)</small></small>
+    
+    :::::::::::::::::::::::::::::::
+    
+    Solution: Static Style-able HTML
+    ================================
+    
+    * Deck is an `<article>`
+    * Each slide is a `<section>`
+    * First slide is the title slide
+    * First element of a `<section>` is the slide’s title
+    * Can include SVG, images, even videos
+    * Stylesheet turns it into a presentation
+
 Diagrams can be added with your favorite Markdown-compatible diagram language,
 such as [Pikchr][], that adds inline SVG to the document. My [Pikchr command-line
 tool][pikchr-cmd] is intended for Unix pipeline-style workflows. Image
@@ -35,9 +59,9 @@ references can also be added if that's more convenient.
 <img src="pipeline.svg" />
 
 See [mdslides.html](mdslides.html) for a rendered presentation about this
-toolset. Its source is `mdslides.md` linked in the "Links" slide at the end;
-GitHub Pages changes a direct link in this document to point to the rendered
-HTML.
+presentation toolset. Its source is `mdslides.md` linked in the "Links" slide
+at the end; GitHub Pages changes a direct link in this document to point to
+the rendered HTML.
 
 The CSS slide technique was inspired by
 "[Creating a Slide Deck with Just HTML and CSS][knowler]" by Nathan Knowler
