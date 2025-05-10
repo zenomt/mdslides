@@ -1,8 +1,8 @@
 Slide Presentations in Markdown
 ===============================
-This repo contains a CSS stylesheet and an Awk preprocessor script to make
-it easy to write basic HTML-only (no JavaScript) slide presentations in
-Markdown, using *any* Markdown formatter.
+[This repo][repo] contains a CSS stylesheet and an Awk preprocessor script
+to make it easy to write basic HTML-only (no JavaScript) slide presentations
+in Markdown, using *any* Markdown formatter.
 
 Add a link to the stylesheet at the top of your Markdown:
 
@@ -68,6 +68,7 @@ The CSS slide technique was inspired by
 on Codepen.
 
 
+  [repo]: https://github.com/zenomt/mdslides
   [Pikchr]: https://pikchr.org/
   [pikchr-cmd]: https://github.com/zenomt/pikchr-cmd
   [knowler]: https://codepen.io/knowler/pen/eYGRwyb
