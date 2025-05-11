@@ -108,3 +108,10 @@ svg { margin: 3vh 0; }
 ul > li > ul { list-style-type: square; }
 
 ul, ol { padding-inline-start: 4vw; }
+
+blockquote {
+	padding: 0 2vw;
+	border-left: 0.75vw solid;
+}
+
+blockquote > * { margin: 0 }
