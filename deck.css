@@ -39,11 +39,6 @@ html, body {
 	}
 }
 
-section {
-	block-size: 100%;
-	counter-increment: slide;
-}
-
 section > * { margin: 0 0 2vh; }
 
 /* Show the slide counter */
@@ -59,6 +54,20 @@ article > ::before {
 	line-height: 1;
 }
 
+section {
+	block-size: 100%;
+	margin: 0;
+	position: relative;
+	display: grid;
+	grid-auto-flow: row;
+	grid-template-rows: max-content;
+	grid-template-columns: 1fr;
+	row-gap: 1vh;
+	padding: 2vh;
+	break-before: page;
+	counter-increment: slide;
+}
+
 /* Title slide layout */
 section:first-of-type {
 	display: grid;
@@ -69,19 +78,6 @@ section:first-of-type {
 }
 
 section:first-of-type > * { margin: 0; }
-
-section {
-	margin: 0;
-	position: relative;
-	display: grid;
-	grid-auto-flow: row;
-	grid-template-rows: max-content;
-	grid-template-columns: 1fr;
-	row-gap: 1vh;
-	padding: 2vh;
-	font-size: 1.5vh;
-	break-before: page;
-}
 
 /* Put regular slide first element at the top */
 section:nth-of-type(n+2) > :first-child {
