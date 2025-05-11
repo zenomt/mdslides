@@ -126,7 +126,7 @@ text "What about diagrams?"
 Pikchr Open-Source Picture Language
 ===================================
 
-* Based on `pic` “boxes and lines” tool of Unix yore
+* Based on `pic` “boxes and arrows” tool of Unix yore
 * Written by author of SQLite for its documentation
 * Embeds in Markdown, generates inline SVG
 * Open-source command-line driver tool written by me for use with _any_ Markdown formatter
