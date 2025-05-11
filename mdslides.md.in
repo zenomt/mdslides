@@ -36,13 +36,22 @@ Inspirations
 
 * `sent` (`https://tools.suckless.org/sent/`)
   * “Simple Plaintext Presentation Tool”
-  * X11 only
   * A little _too_ simple
-* Pandoc
-  * “a universal document converter”
-  * Overkill
-  * Really heavyweight
-  * HTML presentations rely on JavaScript
+  * X11 display only
+* `ssg` (`https://github.com/jroimartin/ssg`)
+  * “simple slide generator”, 380 lines of Perl
+  * “markdown-like” syntax, but too cluttery, also too simple, no good answer for images/diagrams
+  * Postscript output only
+
+:::::::::::::::::::::::::::::::
+
+Anti-Inspiration: Pandoc
+========================
+
+* “a universal document converter”
+* Overkill
+* Really heavyweight
+* HTML presentations rely on JavaScript
 
 :::::::::::::::::::::::::::::::
 
