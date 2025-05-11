@@ -1,5 +1,5 @@
-Slide Presentations in Markdown
-===============================
+Pure HTML+CSS Slide Presentations in Markdown
+=============================================
 [This repo][repo] contains a CSS stylesheet and an Awk preprocessor script
 to make it easy to write basic HTML-only (no JavaScript) slide presentations
 in Markdown, using *any* Markdown formatter.
