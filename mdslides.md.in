@@ -136,7 +136,7 @@ Pikchr Open-Source Picture Language
 “Build” Pipeline the Unix Way™
 ==============================
 
-    $ mdsection.awk mdslides.md.in | pikchr | md2html > mdslides.html
+    $ awk -f mdsection.awk mdslides.md.in | pikchr | md2html > mdslides.html
 
 ``` pikchr @pipeline x-current-color svg-only
 A1: arrow right

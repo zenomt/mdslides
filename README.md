@@ -54,7 +54,7 @@ such as [Pikchr][], that adds inline SVG to the document. My [Pikchr command-lin
 tool][pikchr-cmd] is intended for Unix pipeline-style workflows. Image
 references can also be added if that's more convenient.
 
-    $ awk -f mdsection.awk < mdslides.md.in | pikchr | md2html > mdslides.html
+    $ awk -f mdsection.awk mdslides.md.in | pikchr | md2html > mdslides.html
 
 <img src="pipeline.svg" />
 
