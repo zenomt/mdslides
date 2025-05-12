@@ -89,7 +89,7 @@ Solution: Write it in Markdown
 
 * Easiest way to author HTML
 * Extend with slide delimiter: “`:::`”
-* 16 lines of Awk converts to `<section>`s
+* 8 lines of Awk converts to `<section>`s
   * I’ll show you it later
 
 :::::::::::::::::::::::::::::::
@@ -170,22 +170,16 @@ Section Preprocessor
     #! /usr/bin/env awk -f
     
     /^:::+$/ || /^\.bp$/ {
-    	if(!article)
-    	{
-    		article = 1;
-    		print "<article>"
-    	}
-    	else
-    		print "</section>"
-    	print "<section>"
-    	lastSection = NR;
+        print lastSection ? "</section>" : "<article>";
+        print "<section>"
+        lastSection = NR;
     }
     
     (NR != lastSection)
     
     END {
-    	if(article)
-    		print "\n\n</section>\n</article>"
+        if(lastSection)
+            print "\n\n</section>\n</article>"
     }
 
 :::::::::::::::::::::::::::::::

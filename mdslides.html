@@ -76,7 +76,7 @@
 <ul>
 <li>Easiest way to author HTML</li>
 <li>Extend with slide delimiter: “<code>:::</code>”</li>
-<li>16 lines of Awk converts to <code>&lt;section&gt;</code>s<ul>
+<li>8 lines of Awk converts to <code>&lt;section&gt;</code>s<ul>
 <li>I’ll show you it later</li>
 </ul>
 </li>
@@ -159,13 +159,7 @@ Solution: Static Style-able HTML
 <pre><code>#! /usr/bin/env awk -f
 
 /^:::+$/ || /^\.bp$/ {
-    if(!article)
-    {
-        article = 1;
-        print &quot;&lt;article&gt;&quot;
-    }
-    else
-        print &quot;&lt;/section&gt;&quot;
+    print lastSection ? &quot;&lt;/section&gt;&quot; : &quot;&lt;article&gt;&quot;;
     print &quot;&lt;section&gt;&quot;
     lastSection = NR;
 }
@@ -173,7 +167,7 @@ Solution: Static Style-able HTML
 (NR != lastSection)
 
 END {
-    if(article)
+    if(lastSection)
         print &quot;\n\n&lt;/section&gt;\n&lt;/article&gt;&quot;
 }
 </code></pre>

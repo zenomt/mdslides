@@ -1,13 +1,7 @@
 #! /usr/bin/env awk -f
 
 /^:::+$/ || /^\.bp$/ {
-	if(!article)
-	{
-		article = 1;
-		print "<article>"
-	}
-	else
-		print "</section>"
+	print lastSection ? "</section>" : "<article>";
 	print "<section>"
 	lastSection = NR;
 }
@@ -15,6 +9,6 @@
 (NR != lastSection)
 
 END {
-	if(article)
+	if(lastSection)
 		print "\n\n</section>\n</article>"
 }
