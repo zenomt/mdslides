@@ -76,11 +76,11 @@ Solution: CSS Stylesheet
 ========================
 
 * “Creating a Slide Deck with Just HTML and CSS” by Nathan Knowler on Codepen got me halfway
-* CSS `flex` flexible box layout
 * Each `<section>` fills viewport
-* Overflow `scroll-snap` to next slide
-* CSS Counter for auto slide numbering
 * First slide has distinct Title Slide styling
+* scroll-snap to next slide
+* CSS Counter for auto slide numbering
+* Page break at each slide for printing or PDF
 
 :::::::::::::::::::::::::::::::
 
