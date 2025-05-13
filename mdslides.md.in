@@ -213,6 +213,7 @@ You can use blockquotes too.
 Links
 =====
 
+* [This project](https://github.com/zenomt/mdslides) on GitHub
 * [Markdown source of this presentation](https://zenomt.github.io/mdslides/mdslides.md.in)
 * [`deck.css` presentation stylesheet](https://zenomt.github.io/mdslides/deck.css)
 * [Pikchr home page](https://pikchr.org/)
