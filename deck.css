@@ -66,6 +66,7 @@ section {
 	padding: 2vh;
 	break-before: page;
 	counter-increment: slide;
+	max-height: 100vh;
 }
 
 /* Title slide layout */
@@ -99,7 +100,11 @@ section:nth-of-type(n+2) {
 
 pre { font-size: 2.5vh; }
 
-svg { margin: 3vh 0; }
+svg {
+	margin: 3vh 0;
+	max-height: inherit;
+	max-width: inherit;
+}
 
 ul > li > ul { list-style-type: square; }
 

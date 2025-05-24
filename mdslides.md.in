@@ -1,4 +1,6 @@
 <link rel="stylesheet" href="deck.css" />
+<style> .requote-pikchr > svg { max-height: 40vh; } </style>
+
 <link rel="http://purl.org/dc/terms/requires" href="https://github.com/zenomt/pikchr-cmd" />
 <link rel="http://purl.org/dc/terms/requires" href="https://zenomt.github.io/mdslides/mdsection.awk" />
 
@@ -143,6 +145,7 @@ Pikchr Open-Source Picture Language
 
     $ awk -f mdsection.awk mdslides.md.in | pikchr | md2html > mdslides.html
 
+<div style="max-height: 70vh;">
 ``` pikchr @pipeline x-current-color svg-only
 A1: arrow right
 box rad 5px "mdsection.awk" mono "Preprocessor" fit
@@ -161,6 +164,7 @@ diag(A4) "HTML + SVG Output" ljust aligned above
 arrow <- down 125% from A4
 text "deck.css" mono
 ```
+</div>
 
 :::::::::::::::::::::::::::::::
 
@@ -187,6 +191,7 @@ Section Preprocessor
 Pikchr Example
 ==============
 
+<div class="requote-pikchr">
 ``` pikchr x-current-color svg-only requote delimiters
 # This is the actual source requoted by the pikchr tool.
 dot
@@ -198,6 +203,7 @@ arrow
 arrow radius .05 right .1 then down then \
     left until even with first line then to first line
 ```
+</div>
 
 :::::::::::::::::::::::::::::::
 
