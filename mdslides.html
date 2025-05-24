@@ -128,6 +128,7 @@ Solution: Static Style-able HTML
 <pre><code>$ awk -f mdsection.awk mdslides.md.in | pikchr | md2html &gt; mdslides.html
 </code></pre>
 <div style="max-height: 70vh;">
+<!-- limit the height of the diagram to leave room for the text above -->
 <svg xmlns='http://www.w3.org/2000/svg' viewBox="0 0 729.943 297.14" data-pikchr-date="20250321215505" style='font-size:initial;'>
 <polygon points="74.16,174.74 62.64,179.06 62.64,170.42" style="fill:currentColor"/>
 <path d="M2.16,174.74L68.4,174.74"  style="fill:none;stroke-width:2.16;stroke:currentColor;" />
@@ -178,6 +179,10 @@ END {
 <section>
 <h1>Pikchr Example</h1>
 <div class="requote-pikchr">
+<!--
+class "requote-pikchr" limits the height of its child SVG to 40vh so there's
+room on the slide for the requoted Pikchr source
+-->
 <svg xmlns='http://www.w3.org/2000/svg' viewBox="0 0 488.88 112.32" data-pikchr-date="20250321215505" style='font-size:initial;'>
 <circle cx="4.32" cy="38.16" r="2.16" style="fill:currentColor;stroke-width:2.16;stroke:currentColor;" />
 <path d="M4.32,38.16L112.32,38.16"  style="fill:none;stroke-width:2.16;stroke:currentColor;" />
