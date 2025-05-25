@@ -98,12 +98,13 @@ section:nth-of-type(n+2) {
 	line-height: 1.3;
 }
 
-p { max-height: 100%; }
+p { max-height: inherit; }
 
 pre { font-size: 2.5vh; }
 
 svg, img {
-	margin: 3vh 0;
+	padding: 3vh 0;
+	margin: 0;
 	max-height: inherit;
 	max-width: inherit;
 	width: 100%;
