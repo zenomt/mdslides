@@ -223,6 +223,19 @@ You can use blockquotes too.
 
 :::::::::::::::::::::::::::::::
 
+Tables
+======
+Some Markdown processors (like MD4C `md2html`) support GitHub-style tables:
+
+| Column 1       | Column 2       |
+| -------------- | -------------- |
+| row 1 column 1 | row 1 column 2 |
+| row 2 column 1 | row 2 column 2 |
+| row 3 column 1 | row 3 column 2 |
+| row 4 column 1 | row 4 column 2 |
+
+:::::::::::::::::::::::::::::::
+
 Links
 =====
 

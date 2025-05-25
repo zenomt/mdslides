@@ -121,3 +121,13 @@ blockquote {
 }
 
 blockquote > * { margin: 0 }
+
+table {
+	font-size: 2.5vh;
+	border-collapse: collapse;
+}
+
+th, td {
+	padding: 1vh;
+	border: 0.25vh solid;
+}
