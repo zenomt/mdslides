@@ -163,9 +163,9 @@ Solution: Static Style-able HTML
 <pre><code>#! /usr/bin/env awk -f
 
 /^:::+$/ || /^\.bp$/ {
-    print lastSection ? &quot;&lt;/section&gt;&quot; : &quot;&lt;article&gt;&quot;;
+    print lastSection ? &quot;&lt;/section&gt;&quot; : &quot;&lt;article&gt;&quot;
     print &quot;&lt;section&gt;&quot;
-    lastSection = NR;
+    lastSection = NR
 }
 
 (NR != lastSection)
