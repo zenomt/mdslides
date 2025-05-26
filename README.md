@@ -17,10 +17,11 @@ are centered on the slide. For all other slides, the first element (usually
 an `<h1>` heading) is the slide title, and all other content is left-justified
 and vertically centered.
 
-Slides are delimited with three or more colons (`:::`) on their own line (no
-indentation or trailing whitespace). The [`mdsection.awk`](mdsection.awk)
-preprocessor script looks for slide delimiters and adds the `<article>` and
-`<section>` tags around the slides to work with the stylesheet.
+Slides are delimited in Markdown with three or more colons (`:::`) on their
+own line (no indentation or trailing whitespace). The
+[`mdsection.awk`](mdsection.awk) preprocessor script looks for slide delimiters
+and adds the `<article>` and `<section>` tags around the slides to work with
+the stylesheet.
 
 Example:
 
