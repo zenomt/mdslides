@@ -143,7 +143,7 @@ Pikchr Open-Source Picture Language
 “Build” Pipeline the Unix Way™
 ==============================
 
-    $ awk -f mdsection.awk mdslides.md.in | pikchr | md2html > mdslides.html
+    $ awk -f mdsection.awk mdslides.md.in | pikchr | md2html --github > mdslides.html
 
 <div style="max-height: 70vh;">
 <!-- limit the height of the diagram to leave room for the text above -->

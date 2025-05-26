@@ -8,10 +8,6 @@ Add a link to the stylesheet at the top of your Markdown:
 
     <link rel="stylesheet" href="deck.css" />
 
-The [`mdsection.awk`](mdsection.awk) preprocessor script adds a new delimiter
-to Markdown: a line consisting only of three _or more_ colons (`:::`) (no
-indentation, no trailing whitespace) indicates a new slide.
-
 The [`deck.css`](deck.css) stylesheet uses `<article>` and `<section>` semantic
 markup tags to style the final static HTML into a basic slide presentation
 without any JavaScript. The entire presentation is in an `<article>`, and
@@ -21,9 +17,10 @@ are centered on the slide. For all other slides, the first element (usually
 an `<h1>` heading) is the slide title, and all other content is left-justified
 and vertically centered.
 
-The `mdsection.awk` preprocessor script looks for `:::` slide delimiters and
-adds the `<article>` and `<section>` tags around the slides to work with the
-stylesheet.
+Slides are delimited with three or more colons (`:::`) on their own line (no
+indentation or trailing whitespace). The [`mdsection.awk`](mdsection.awk)
+preprocessor script looks for slide delimiters and adds the `<article>` and
+`<section>` tags around the slides to work with the stylesheet.
 
 Example:
 
@@ -50,11 +47,11 @@ Example:
     * Stylesheet turns it into a presentation
 
 Diagrams can be added with your favorite Markdown-compatible diagram language,
-such as [Pikchr][], that adds inline SVG to the document. My [Pikchr command-line
-tool][pikchr-cmd] is intended for Unix pipeline-style workflows. Image
-references can also be added if that's more convenient.
+such as [Pikchr][], that adds inline SVG to the document. My
+[Pikchr command-line tool][pikchr-cmd] is intended for Unix pipeline-style
+workflows. Image references can also be added if that's more convenient.
 
-    $ awk -f mdsection.awk mdslides.md.in | pikchr | md2html > mdslides.html
+    $ awk -f mdsection.awk mdslides.md.in | pikchr | md2html --github > mdslides.html
 
 <img src="pipeline.svg" />
 
