@@ -157,10 +157,10 @@ box same "Any" bold "Markdown" "Formatter" fit
 A4: arrow
 
 define diag { line invis go 5% heading 45 from (0.4<$1.start,$1.end>) }
-diag(A1) "Sections + Markdown + Pikchr" ljust aligned above
+diag(A1) "Slide Delims + Markdown + Pikchr" ljust aligned above
 diag(A2) "HTML + Markdown + Pikchr" ljust aligned above
 diag(A3) "HTML + Markdown + SVG" ljust aligned above
-diag(A4) "HTML + SVG Output" ljust aligned above
+diag(A4) "HTML + SVG" ljust aligned above
 
 arrow <- down 125% from A4
 text "deck.css" mono
