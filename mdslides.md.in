@@ -92,7 +92,7 @@ Solution: Write it in Markdown
 
 * Easiest way to author HTML
 * Extend with slide delimiter: “`:::`”
-* 8 lines of Awk converts to `<section>`s
+  * 8 lines of Awk converts to `<section>`s
   * I’ll show you it later
 
 :::::::::::::::::::::::::::::::
