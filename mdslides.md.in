@@ -2,9 +2,6 @@
 <link rel="stylesheet" href="deck.css" />
 <style> .requote-pikchr > svg { max-height: 40vh; } </style>
 
-<link rel="http://purl.org/dc/terms/requires" href="https://github.com/zenomt/pikchr-cmd" />
-<link rel="http://purl.org/dc/terms/requires" href="https://zenomt.github.io/mdslides/mdsection.awk" />
-
 :::::::::::::::::::::::::::::::
 
 This Deck is Just HTML and CSS
