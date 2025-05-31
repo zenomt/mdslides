@@ -21,7 +21,7 @@ And I wrote it in Markdown*
 #
 
 ``` pikchr x-current-color svg-only
-box invis "PowerPoint is awful"
+text "PowerPoint is awful"
 ```
 
 :::::::::::::::::::::::::::::::
@@ -29,7 +29,7 @@ box invis "PowerPoint is awful"
 #
 
 ``` pikchr x-current-color svg-only
-box invis "Markdown" big big "so hot right now" "(and easy)" small small
+text "Markdown" big big "so hot right now" "(and easy)" small small
 ```
 
 :::::::::::::::::::::::::::::::
@@ -126,7 +126,7 @@ Example
 
 #
 ``` pikchr x-current-color svg-only
-box invis "What about diagrams?"
+text "What about diagrams?"
 ```
 
 :::::::::::::::::::::::::::::::
