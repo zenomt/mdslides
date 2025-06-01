@@ -143,8 +143,8 @@ Pikchr Open-Source Picture Language
 
     $ awk -f mdsection.awk mdslides.md.in | pikchr | md2html --github > mdslides.html
 
-<div style="max-height: 70vh;">
 <!-- limit the height of the diagram to leave room for the text above -->
+<div style="max-height: 70vh;">
 ``` pikchr @pipeline x-current-color svg-only
 A1: arrow right
 box rad 5px "mdsection.awk" mono "Preprocessor" fit
@@ -190,13 +190,11 @@ Section Preprocessor
 Pikchr Example
 ==============
 
-<div class="requote-pikchr">
-
 <!--
 class "requote-pikchr" limits the height of its child SVG to 40vh so there's
 room on the slide for the requoted Pikchr source
 -->
-
+<div class="requote-pikchr">
 ``` pikchr x-current-color svg-only requote delimiters
 # This is the actual source requoted by the pikchr tool.
 dot
