@@ -215,9 +215,10 @@ arrow radius .05 right .1 then down then \
 Blockquotes
 ===========
 
-You can use blockquotes too.
+> “You can use a blockquote to show something that someone said. Blockquotes
+> look like this.”
 
-> Blockquotes look like this.
+<small><em>Michael Thornburgh</em>, June 2025</small>
 
 :::::::::::::::::::::::::::::::
 
