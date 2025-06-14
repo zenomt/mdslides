@@ -2,20 +2,20 @@
 <link rel="stylesheet" href="deck.css" />
 <style> .requote-pikchr > svg { max-height: 40vh; } </style>
 <article>
-<section>
+<section id='page-1'>
 <h1>This Deck is Just HTML and CSS</h1>
 <p>And I wrote it in Markdown*</p>
 <p><small><small>(*with a teeny-tiny extension)</small></small></p>
 <br/>
 <small>Michael Thornburgh</small>
 </section>
-<section>
+<section id='page-2'>
 <h1></h1>
 <svg xmlns='http://www.w3.org/2000/svg' viewBox="0 0 170.784 24.48" data-pikchr-date="20250321215505" style='font-size:initial;'>
 <text x="85.392" y="12.24" text-anchor="middle" fill="currentColor" dominant-baseline="central">PowerPoint is awful</text>
 </svg>
 </section>
-<section>
+<section id='page-3'>
 <h1></h1>
 <svg xmlns='http://www.w3.org/2000/svg' viewBox="0 0 144.54 68.8824" data-pikchr-date="20250321215505" style='font-size:initial;'>
 <text x="72.27" y="17.91" text-anchor="middle" fill="currentColor" font-size="156.25%" dominant-baseline="central">Markdown</text>
@@ -23,7 +23,7 @@
 <text x="72.27" y="60.2712" text-anchor="middle" fill="currentColor" font-size="64%" dominant-baseline="central">(and easy)</text>
 </svg>
 </section>
-<section>
+<section id='page-4'>
 <h1>Inspirations</h1>
 <ul>
 <li><code>sent</code> (<a href="https://tools.suckless.org/sent/"><code>https://tools.suckless.org/sent/</code></a>)<ul>
@@ -40,7 +40,7 @@
 </li>
 </ul>
 </section>
-<section>
+<section id='page-5'>
 <h1>Anti-Inspiration: <a href="https://pandoc.org/">Pandoc</a></h1>
 <ul>
 <li>“a universal document converter”</li>
@@ -49,7 +49,7 @@
 <li>HTML presentations rely on JavaScript</li>
 </ul>
 </section>
-<section>
+<section id='page-6'>
 <h1>Solution: Static Style-able HTML</h1>
 <ul>
 <li>Deck is an <code>&lt;article&gt;</code></li>
@@ -60,7 +60,7 @@
 <li>Stylesheet turns it into a presentation</li>
 </ul>
 </section>
-<section>
+<section id='page-7'>
 <h1>Solution: CSS Stylesheet</h1>
 <ul>
 <li>“Creating a Slide Deck with Just HTML and CSS” by Nathan Knowler on Codepen got me halfway</li>
@@ -71,7 +71,7 @@
 <li>Page break at each slide for printing or PDF</li>
 </ul>
 </section>
-<section>
+<section id='page-8'>
 <h1>Solution: Write it in Markdown</h1>
 <ul>
 <li>Easiest way to author HTML</li>
@@ -82,7 +82,7 @@
 </li>
 </ul>
 </section>
-<section>
+<section id='page-9'>
 <h1>Example</h1>
 <pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;deck.css&quot; /&gt;
 
@@ -107,13 +107,13 @@ Solution: Static Style-able HTML
 * Stylesheet turns it into a presentation
 </code></pre>
 </section>
-<section>
+<section id='page-10'>
 <h1></h1>
 <svg xmlns='http://www.w3.org/2000/svg' viewBox="0 0 194.4 24.48" data-pikchr-date="20250321215505" style='font-size:initial;'>
 <text x="97.2" y="12.24" text-anchor="middle" fill="currentColor" dominant-baseline="central">What about diagrams?</text>
 </svg>
 </section>
-<section>
+<section id='page-11'>
 <h1>Pikchr Open-Source Picture Language</h1>
 <ul>
 <li>Based on <code>pic</code> “boxes and arrows” tool of Unix yore</li>
@@ -122,7 +122,7 @@ Solution: Static Style-able HTML
 <li>Open-source command-line driver tool written by me for use with <em>any</em> Markdown formatter</li>
 </ul>
 </section>
-<section>
+<section id='page-12'>
 <h1>“Build” Pipeline the Unix Way™</h1>
 <pre><code>$ awk -f mdsection.awk mdslides.md.in | pikchr | md2html --github &gt; mdslides.html
 </code></pre>
@@ -157,13 +157,13 @@ Solution: Static Style-able HTML
 </svg>
 </div>
 </section>
-<section>
+<section id='page-13'>
 <h1>Section Preprocessor</h1>
 <pre><code>#! /usr/bin/env awk -f
 
-/^:::+$/ || /^\.bp$/ {
+/^:::+$/ {
     print lastSection ? &quot;&lt;/section&gt;&quot; : &quot;&lt;article&gt;&quot;
-    print &quot;&lt;section&gt;&quot;
+    printf &quot;&lt;section id='page-%d'&gt;\n&quot;, ++page
     lastSection = NR
 }
 
@@ -175,7 +175,7 @@ END {
 }
 </code></pre>
 </section>
-<section>
+<section id='page-14'>
 <h1>Pikchr Example</h1>
 <!--
 class "requote-pikchr" limits the height of its child SVG to 40vh so there's
@@ -212,7 +212,7 @@ arrow radius .05 right .1 then down then \
 </code></pre>
 </div>
 </section>
-<section>
+<section id='page-15'>
 <h1>Blockquotes</h1>
 <blockquote>
 <p>“You can use a blockquote to show something that someone said. Blockquotes
@@ -220,7 +220,7 @@ look like this.”</p>
 </blockquote>
 <p><small><em>Michael Thornburgh</em>, June 2025</small></p>
 </section>
-<section>
+<section id='page-16'>
 <h1>Tables</h1>
 <p>Some Markdown processors (like MD4C <code>md2html</code>) support GitHub-style tables:</p>
 <table>
@@ -250,11 +250,11 @@ look like this.”</p>
 </tbody>
 </table>
 </section>
-<section>
+<section id='page-17'>
 <h1></h1>
 <p><img src="bottle-small.jpg" alt=""></p>
 </section>
-<section>
+<section id='page-18'>
 <h1>Links</h1>
 <ul>
 <li><a href="https://github.com/zenomt/mdslides">This project</a> on GitHub</li>
@@ -267,7 +267,7 @@ look like this.”</p>
 <li><a href="https://codepen.io/knowler">Nathan Knowler on Codepen</a>, the starting point for <code>deck.css</code></li>
 </ul>
 </section>
-<section>
+<section id='page-19'>
 <h1></h1>
 <center>made with <code>vi</code></center>
 </section>

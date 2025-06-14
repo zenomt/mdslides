@@ -57,7 +57,10 @@ workflows. Image references can also be added if that's more convenient.
 <img src="pipeline.svg" />
 
 See [mdslides.html](mdslides.html) for a rendered presentation about this
-presentation toolset. Its source is [`mdslides.md.in`](mdslides.md.in).
+presentation toolset. Its source is [`mdslides.md.in`](mdslides.md.in). In
+this example I use the [`md2html`](https://github.com/mity/md4c/tree/master/md2html)
+formatter from the [Markdown for C](https://github.com/mity/md4c) project,
+which is CommonMark compliant and supports GitHub extensions such as tables.
 
 The CSS slide technique was inspired by
 "[Creating a Slide Deck with Just HTML and CSS][knowler]" by Nathan Knowler

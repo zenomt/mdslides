@@ -1,7 +1,7 @@
 default: all
 all: mdslides.html pipeline.svg
 
-%.html : %.md.in
+%.html : %.md.in mdsection.awk
 	awk -f mdsection.awk $< | pikchr | md2html --github > $@
 
 pipeline.svg: mdslides.md.in
