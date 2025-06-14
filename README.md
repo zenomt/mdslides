@@ -23,7 +23,7 @@ own line (no indentation or trailing whitespace). The
 and adds the `<article>` and `<section>` tags around the slides to work with
 the stylesheet.
 
-Example:
+Example Markdown Source:
 
     <link rel="stylesheet" href="deck.css" />
     
@@ -47,6 +47,12 @@ Example:
     * Can include SVG, images, even videos
     * Stylesheet turns it into a presentation
 
+For the author’s convenience while iterating, `mdsection.awk` adds a hash
+(fragment) identifier to each `<section>` to facilitate returning directly
+to a specific slide; for example, to jump directly to slide 13 when reloading,
+add [`#page-13`](mdslides.html#page-13) to the end of the deck's URL in your
+browser’s address bar.
+
 Diagrams can be added with your favorite Markdown-compatible diagram language,
 such as [Pikchr][], that adds inline SVG to the document. My
 [Pikchr command-line tool][pikchr-cmd] is intended for Unix pipeline-style
@@ -58,9 +64,9 @@ workflows. Image references can also be added if that's more convenient.
 
 See [mdslides.html](mdslides.html) for a rendered presentation about this
 presentation toolset. Its source is [`mdslides.md.in`](mdslides.md.in). In
-this example I use the [`md2html`](https://github.com/mity/md4c/tree/master/md2html)
-formatter from the [Markdown for C](https://github.com/mity/md4c) project,
-which is CommonMark compliant and supports GitHub extensions such as tables.
+this example I use the [`md2html`][md2html] formatter from the
+[Markdown for C][MD4C] project, which is CommonMark compliant and supports
+GitHub extensions such as tables.
 
 The CSS slide technique was inspired by
 "[Creating a Slide Deck with Just HTML and CSS][knowler]" by Nathan Knowler
@@ -71,3 +77,5 @@ on Codepen.
   [Pikchr]: https://pikchr.org/
   [pikchr-cmd]: https://github.com/zenomt/pikchr-cmd
   [knowler]: https://codepen.io/knowler/pen/eYGRwyb
+  [md2html]: https://github.com/mity/md4c/tree/master/md2html
+  [MD4C]: https://github.com/mity/md4c
