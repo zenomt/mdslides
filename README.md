@@ -47,8 +47,8 @@ Example Markdown Source:
     * Can include SVG, images, even videos
     * Stylesheet turns it into a presentation
 
-For the author’s convenience while iterating, `mdsection.awk` adds a hash
-(fragment) identifier to each `<section>` to facilitate returning directly
+For your convenience while authoring a presentation, `mdsection.awk` adds a
+hash (fragment) identifier to each `<section>` to facilitate returning directly
 to a specific slide; for example, to jump directly to slide 13 when reloading,
 add [`#page-13`](mdslides.html#page-13) to the end of the deck's URL in your
 browser’s address bar.
