@@ -48,7 +48,7 @@ article > ::before {
 	inset-block-end: 1vh;
 	inset-inline-end: 1vh;
 	padding: 1.5vh;
-	font-size: 3.0vh;
+	font-size: 3.0vmin;
 	font-weight: 700;
 	font-variant: tabular-nums;
 	line-height: 1;
@@ -74,7 +74,7 @@ section:first-of-type {
 	display: grid;
 	place-content: center;
 	text-align: center;
-	font-size: 7.0vh;
+	font-size: 7.0vmin;
 	line-height: 1.1;
 }
 
@@ -94,13 +94,13 @@ section:nth-of-type(n+2) {
 	justify-content: start;
 	text-align: left;
 	padding-inline: 4vw;
-	font-size: 5.0vh;
+	font-size: 5.0vmin;
 	line-height: 1.3;
 }
 
 p { max-height: inherit; }
 
-pre { font-size: 2.5vh; }
+pre { font-size: 2.5vmin; }
 
 svg, img {
 	padding: 3vh 0;
@@ -123,7 +123,7 @@ blockquote {
 blockquote > * { margin: 0 }
 
 table {
-	font-size: 2.5vh;
+	font-size: 2.5vmin;
 	border-collapse: collapse;
 	color: inherit;
 }
