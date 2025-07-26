@@ -118,6 +118,7 @@ ul, ol { padding-inline-start: 4vw; }
 blockquote {
 	padding: 0 2vw;
 	border-left: 0.75vw solid;
+	font-size: larger;
 }
 
 blockquote > * { margin: 0 }

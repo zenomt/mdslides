@@ -90,7 +90,7 @@ Solution: Write it in Markdown
 * Easiest way to author HTML
 * Extend with slide delimiter: “`:::`”
   * 8 lines of Awk converts to `<section>`s
-  * I’ll show you it later
+    * I’ll show you it later
 
 :::::::::::::::::::::::::::::::
 
@@ -213,10 +213,10 @@ arrow radius .05 right .1 then down then \
 Blockquotes
 ===========
 
-> “You can use a blockquote to show something that someone said. Blockquotes
-> look like this.”
+> You can use a blockquote to show something that someone said. Blockquotes
+> look like this.
 
-<small><em>Michael Thornburgh</em>, June 2025</small>
+_Michael Thornburgh_, June 2025
 
 :::::::::::::::::::::::::::::::
 
