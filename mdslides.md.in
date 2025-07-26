@@ -190,6 +190,8 @@ Section Preprocessor
 Pikchr Example
 ==============
 
+&nbsp;
+
 <!--
 class "requote-pikchr" limits the height of its child SVG to 40vh so there's
 room on the slide for the requoted Pikchr source
