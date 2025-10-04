@@ -164,15 +164,15 @@ Solution: Static Style-able HTML
 <pre><code>#! /usr/bin/env awk -f
 
 /^:::+$/ {
-    print lastSection ? &quot;&lt;/section&gt;&quot; : &quot;&lt;article&gt;&quot;
+    print page ? &quot;&lt;/section&gt;&quot; : &quot;&lt;article&gt;&quot;
     printf &quot;&lt;section id='page-%d'&gt;\n&quot;, ++page
-    lastSection = NR
+    next
 }
 
-(NR != lastSection)
+{ print $0 }
 
 END {
-    if(lastSection)
+    if(page)
         print &quot;\n\n&lt;/section&gt;\n&lt;/article&gt;&quot;
 }
 </code></pre>

@@ -1,14 +1,14 @@
 #! /usr/bin/env awk -f
 
 /^:::+$/ {
-	print lastSection ? "</section>" : "<article>"
+	print page ? "</section>" : "<article>"
 	printf "<section id='page-%d'>\n", ++page
-	lastSection = NR
+	next
 }
 
-(NR != lastSection)
+{ print $0 }
 
 END {
-	if(lastSection)
+	if(page)
 		print "\n\n</section>\n</article>"
 }
