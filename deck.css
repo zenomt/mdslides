@@ -39,6 +39,8 @@ html, body {
 	}
 }
 
+h1, h2 { font-size: 120%; }
+
 section > * { margin: 0 0 2vh; }
 
 /* Show the slide counter */
