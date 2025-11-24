@@ -1,6 +1,5 @@
 <meta name="color-scheme" content="light dark">
 <link rel="stylesheet" href="deck.css" />
-<style> .requote-pikchr > svg { max-height: 40vh; } </style>
 <article>
 <section id='page-1'>
 <h1>This Deck is Just HTML and CSS</h1>
@@ -128,8 +127,6 @@ Solution: Static Style-able HTML
 <h1>“Build” Pipeline the Unix Way™</h1>
 <pre><code>$ awk -f mdsection.awk mdslides.md.in | pikchr | md2html --github &gt; mdslides.html
 </code></pre>
-<!-- limit the height of the diagram to leave room for the text above -->
-<div style="max-height: 70vh;">
 <svg xmlns='http://www.w3.org/2000/svg' viewBox="0 0 684.978 316.457" data-pikchr-date="20250321215505" style='font-size:initial;'>
 <polygon points="74.16,199.097 62.64,203.417 62.64,194.777" style="fill:currentColor"/>
 <path d="M2.16,199.097L68.4,199.097"  style="fill:none;stroke-width:2.16;stroke:currentColor;" />
@@ -157,7 +154,6 @@ Solution: Static Style-able HTML
 <path d="M624.067,204.857L624.067,289.097"  style="fill:none;stroke-width:2.16;stroke:currentColor;" />
 <text x="624.067" y="304.217" text-anchor="middle" font-family="monospace" fill="currentColor" dominant-baseline="central">deck.css</text>
 </svg>
-</div>
 </section>
 <section id='page-13'>
 <h1>Section Preprocessor</h1>
@@ -179,12 +175,6 @@ END {
 </section>
 <section id='page-14'>
 <h1>Pikchr Example</h1>
-<p> </p>
-<!--
-class "requote-pikchr" limits the height of its child SVG to 40vh so there's
-room on the slide for the requoted Pikchr source
--->
-<div class="requote-pikchr">
 <svg xmlns='http://www.w3.org/2000/svg' viewBox="0 0 488.88 112.32" data-pikchr-date="20250321215505" style='font-size:initial;'>
 <circle cx="4.32" cy="38.16" r="2.16" style="fill:currentColor;stroke-width:2.16;stroke:currentColor;" />
 <path d="M4.32,38.16L112.32,38.16"  style="fill:none;stroke-width:2.16;stroke:currentColor;" />
@@ -213,7 +203,6 @@ arrow radius .05 right .1 then down then \
     left until even with first line then to first line
 ```
 </code></pre>
-</div>
 </section>
 <section id='page-15'>
 <h1>Blockquotes</h1>
