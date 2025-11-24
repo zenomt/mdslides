@@ -142,7 +142,7 @@ Pikchr Open-Source Picture Language
 
     $ awk -f mdsection.awk mdslides.md.in | pikchr | md2html --github > mdslides.html
 
-``` pikchr @pipeline x-current-color svg-only
+``` pikchr @pipeline.svg x-current-color svg-only
 A1: arrow right
 box rad 5px "mdsection.awk" mono "Preprocessor" fit
 A2: arrow
