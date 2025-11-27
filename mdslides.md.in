@@ -90,6 +90,7 @@ Solution: Write it in Markdown
 * Extend with slide delimiter: “`:::`”
   * 8 lines of Awk converts to `<section>`s
     * I’ll show you it later
+    * Use with any CommonMark formatter
 
 :::::::::::::::::::::::::::::::
 

@@ -128,7 +128,9 @@ p :is(img, svg) {
 
 ul > li > ul { list-style-type: square; }
 
-ul, ol { padding-inline: 4vw; }
+ul, ol { padding-left: 4vw; }
+
+section > :is(ul, ol) { padding-right: 4vw; }
 
 blockquote {
 	padding: 0 2vw;
