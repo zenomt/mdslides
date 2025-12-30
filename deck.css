@@ -17,11 +17,14 @@
 
 * { box-sizing: border-box; }
 
+:root {
+	font-family: Avenir Next, Arial, Helvetica, system-ui;
+}
+
 html, body {
 	block-size: 100%;
 	counter-reset: slide;
 	margin: 0;
-	font-family: Avenir Next, Arial, Helvetica, system-ui;
 }
 
 @media screen {
