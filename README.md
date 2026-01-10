@@ -2,7 +2,7 @@ Pure HTML+CSS Slide Presentations in Markdown
 =============================================
 [This repo][repo] contains a CSS stylesheet and an Awk preprocessor script
 to make it easy to write basic HTML-only (no JavaScript) slide presentations
-in Markdown, using *any* Markdown formatter.
+in Markdown, using *any* [CommonMark][]-compliant Markdown formatter.
 
 Add a link to the stylesheet at the top of your Markdown:
 
@@ -79,3 +79,4 @@ on Codepen.
   [knowler]: https://codepen.io/knowler/pen/eYGRwyb
   [md2html]: https://github.com/mity/md4c/tree/master/md2html
   [MD4C]: https://github.com/mity/md4c
+  [CommonMark]: https://commonmark.org/

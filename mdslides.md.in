@@ -15,7 +15,6 @@ And I wrote it in Markdown*
 :::::::::::::::::::::::::::::::
 
 #
-
 ``` pikchr x-current-color svg-only
 text "PowerPoint is awful"
 ```
@@ -23,7 +22,6 @@ text "PowerPoint is awful"
 :::::::::::::::::::::::::::::::
 
 #
-
 ``` pikchr x-current-color svg-only
 text "Markdown" big big "so hot right now" "(and easy)" small small
 ```
@@ -149,7 +147,7 @@ box rad 5px "mdsection.awk" mono "Preprocessor" fit
 A2: arrow
 box same "pikchr" mono "Preprocessor"
 A3: arrow
-box same "Any" bold "Markdown" "Formatter" fit
+box same "Any" bold "CommonMark" "Formatter" fit
 A4: arrow
 
 define diag { line invis go 5% heading 45 from (0.4<$1.start,$1.end>) }
