@@ -86,7 +86,7 @@ Solution: Write it in Markdown
 
 * Easiest way to author HTML
 * Extend with slide delimiter: “`:::`”
-  * 8 lines of Awk converts to `<section>`s
+  * 9 lines of Awk converts to `<section>`s
     * I’ll show you it later
     * Use with any CommonMark formatter
 
@@ -167,9 +167,10 @@ Section Preprocessor
 
     #! /usr/bin/env awk -f
     
-    /^:::+$/ {
+    /^ {0,3}:::+([ \t]+.*)?$/ {
+        sub(/^ *:*/, "")
         print page ? "</section>" : "<article>"
-        printf "<section id='page-%d'>\n", ++page
+        printf "<section id='page-%d'%s>\n", ++page, $0
         next
     }
     

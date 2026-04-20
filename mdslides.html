@@ -75,7 +75,7 @@
 <ul>
 <li>Easiest way to author HTML</li>
 <li>Extend with slide delimiter: “<code>:::</code>”<ul>
-<li>8 lines of Awk converts to <code>&lt;section&gt;</code>s<ul>
+<li>9 lines of Awk converts to <code>&lt;section&gt;</code>s<ul>
 <li>I’ll show you it later</li>
 <li>Use with any CommonMark formatter</li>
 </ul>
@@ -160,9 +160,10 @@ Solution: Static Style-able HTML
 <h1>Section Preprocessor</h1>
 <pre><code>#! /usr/bin/env awk -f
 
-/^:::+$/ {
+/^ {0,3}:::+([ \t]+.*)?$/ {
+    sub(/^ *:*/, &quot;&quot;)
     print page ? &quot;&lt;/section&gt;&quot; : &quot;&lt;article&gt;&quot;
-    printf &quot;&lt;section id='page-%d'&gt;\n&quot;, ++page
+    printf &quot;&lt;section id='page-%d'%s&gt;\n&quot;, ++page, $0
     next
 }
 
