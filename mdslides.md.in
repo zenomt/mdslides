@@ -1,6 +1,10 @@
 <meta name="color-scheme" content="light dark">
 <link rel="stylesheet" href="deck.css" />
 
+<style>
+.bottle-background { background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.60)), url('bottle-small.jpg') center / cover; }
+</style>
+
 :::::::::::::::::::::::::::::::
 
 This Deck is Just HTML and CSS
@@ -225,6 +229,16 @@ Some Markdown processors (like MD4C `md2html`) support GitHub-style tables:
 
 #
 ![](bottle-small.jpg)
+
+::::::::::::::::::::::::::::::: class="bottle-background" style="color: blueviolet; font-family: Brush Script MT"
+
+# Per-Slide Styling
+
+``` pikchr x-current-color svg-only
+text "Get" "Fancy"
+```
+
+<center><small><small>(if you want)</small></small></center>
 
 :::::::::::::::::::::::::::::::
 
