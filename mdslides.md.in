@@ -232,7 +232,8 @@ Some Markdown processors (like MD4C `md2html`) support GitHub-style tables:
 
 ::::::::::::::::::::::::::::::: class="bottle-background" style="color: blueviolet; font-family: Brush Script MT"
 
-# Per-Slide Styling
+Per-Slide Styling
+=================
 
 ``` pikchr x-current-color svg-only
 text "Get" "Fancy"
