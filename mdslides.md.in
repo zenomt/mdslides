@@ -3,6 +3,7 @@
 
 <style>
 .bottle-background { background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.60)), url('bottle-small.jpg') center / cover; }
+[fancy-font] { font-family: Brush Script MT; }
 </style>
 
 :::::::::::::::::::::::::::::::
@@ -230,7 +231,7 @@ Some Markdown processors (like MD4C `md2html`) support GitHub-style tables:
 #
 ![](bottle-small.jpg)
 
-::::::::::::::::::::::::::::::: class="bottle-background" style="color: blueviolet; font-family: Brush Script MT"
+::::::::::::::::::::::::::::::: fancy-font class="bottle-background" style="color: blueviolet"
 
 Per-Slide Styling
 =================
